@@ -30,14 +30,11 @@ import eyed3
 import pydub
 import matplotlib.pyplot 
 from urllib.parse import urlparse
-
 from sklearn.metrics.pairwise import cosine_similarity
 
 load_dotenv()
 
 EMOJIS_API_KEY = os.getenv("EMOJIS_API_KEY")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 def transcribe_audio(
